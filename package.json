@@ -1,0 +1,23 @@
+{
+  "name": "image-search",
+  "version": "1.0.0",
+  "description": "Image Search Abstraction Layer Project for FCC Backend Certificate",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReeceLangerock/Image-Search-Abstraction-Layer.git"
+  },
+  "author": "reecelangerock",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReeceLangerock/Image-Search-Abstraction-Layer/issues"
+  },
+  "homepage": "https://github.com/ReeceLangerock/Image-Search-Abstraction-Layer#readme"
+}
