@@ -46,10 +46,10 @@ router.get('/:searchTerm', function(req, res) {
 function recordSearch(search){
     return new Promise(function(resolve, reject) {
       console.log(search);
-      var inputDate = new Date(myDate.toISOString());
+
       db.collection('searches').insert({
                         searchQuery: search,
-                        dateSearched: inputDate
+                        dateSearched: new Date()
                     });
       return resolve();
     })
