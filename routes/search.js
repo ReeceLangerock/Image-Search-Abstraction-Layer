@@ -10,7 +10,7 @@ var request = require('request').defaults({
 var url = "https://api.cognitive.microsoft.com/bing/v5.0/images/search";
 
 mongo.connect(mongoURL, function(err, database) {
-    if (err) throw err;
+    if (err) console.log(err);
     db = database;
     console.log("connected to DB");
 
