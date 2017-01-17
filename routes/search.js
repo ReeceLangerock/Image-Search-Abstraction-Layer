@@ -24,6 +24,9 @@ router.get('/', function(req, res) {
 router.get('/:searchTerm', function(req, res) {
     var searchTerm = req.params.searchTerm;
     var numResults = req.query.offset;
+    if(numResults == undefined){
+      numResults = 1;
+    }
     var searchResults = [];
     var urlWithSearch = url + "?q=" + searchTerm + "&count=" + numResults;
 
@@ -43,9 +46,10 @@ router.get('/:searchTerm', function(req, res) {
 function recordSearch(search){
     return new Promise(function(resolve, reject) {
       console.log(search);
+      var inputDate = new Date(myDate.toISOString());
       db.collection('searches').insert({
                         searchQuery: search,
-                        dateSearched: $currentDate
+                        dateSearched: inputDate
                     });
       return resolve();
     })
