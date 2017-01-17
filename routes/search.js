@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var mongo = require('mongodb').MongoClient;
-var mongoURL = `mongodb://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@ds111549.mlab.com:mongodb://<dbuser>:<dbpassword>@ds111549.mlab.com:11549/image-search-project`;
+var mongoURL = 'mongodb://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@ds111549.mlab.com:11549/image-search-project'
 var request = require('request').defaults({
     headers: {
         'Ocp-Apim-Subscription-Key': 'fa35580541df4378851f27029ed00b4c'
