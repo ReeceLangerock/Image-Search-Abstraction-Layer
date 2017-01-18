@@ -27,9 +27,9 @@ function getRecentSearches() {
         db.collection('searches').find().sort({
             _id: 1
         }).limit(50).toArray(function(err, documents) {
-            
+
             console.log(documents);
-            return resolve(dbResults);
+            return resolve(documents);
         });
 
     });
