@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
 function getRecentSearches() {
     return new Promise(function(resolve, reject) {
         db.collection('searches').find().sort({
-            _id: 1
+            _id: -1
         }).limit(50).toArray(function(err, documents) {
 
             console.log(documents);
