@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Node/Express Test</title>
+    <title>Recent Searches</title>
 
 </head>
 
@@ -13,7 +13,7 @@
 
             <% for (var i =0; i < data.length; i++) { %>
 
-                <p>Search Term: "<%= data[i].searchQuery %>" &ensp|&ensp Date Searched: <%= data[i].dateSearched %></p>
+                <p>Search Term: "<%= data[i].searchQuery %>"    |    Date Searched: <%= data[i].dateSearched %></p>
                 <br>
 
                 <% } %>

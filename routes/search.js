@@ -18,7 +18,7 @@ mongo.connect(mongoURL, function(err, database) {
 
 
 router.get('/', function(req, res) {
-    res.send("search");
+    res.send("Enter search term!");
 })
 
 router.get('/:searchTerm', function(req, res) {
