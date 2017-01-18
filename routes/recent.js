@@ -13,7 +13,7 @@ mongo.connect(mongoURL, function(err, database) {
 router.get('/', function(req, res) {
 
     getRecentSearches().then(function(response, error) {
-      return res.render('searchResults', {
+      return res.render('displayRecent', {
            title: "Recent Searches",
            data: response
          });
