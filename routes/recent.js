@@ -10,24 +10,26 @@ mongo.connect(mongoURL, function(err, database) {
 
 });
 
-router.get('/', function(req, res){
+router.get('/', function(req, res) {
 
-getRecentSearches.then(function(response, error){
-  res.send(response);
+    getRecentSearches.then(function(response, error) {
+        res.send(response);
 
-  //return res.render('searchResults', {
-  //    title: "Search Results",
-  //      data: response
-  //  });
-  })
+        //return res.render('searchResults', {
+        //    title: "Search Results",
+        //      data: response
+        //  });
+    })
 })
 
-function getRecentSearches(){
-  return new Promise(function(resolve, reject) {
-    var dbResults =  db.collection('searches').find().sort({_id:1}).limit(50);
-    console.log(dbResults);
-    return resolve(dbResults);
-}
+function getRecentSearches() {
+    return new Promise(function(resolve, reject) {
+        var dbResults = db.collection('searches').find().sort({
+            _id: 1
+        }).limit(50);
+        console.log(dbResults);
+        return resolve(dbResults);
+    });
 }
 
 module.exports = router;
